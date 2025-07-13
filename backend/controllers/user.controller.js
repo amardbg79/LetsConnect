@@ -13,3 +13,28 @@ export const getUserForSidebar = async (req, res) => {
         
     }
 }
+
+// export const getUserForSidebar = async (req, res) => {
+// 	try {
+// 		const loginUsersId = req.user._id;
+
+// 		const filteredUsers = await User.find({ _id: { $ne: loginUsersId } }).select("-password");
+
+// 		const usersWithProfilePics = filteredUsers.map((user) => {
+// 			const gender = user.gender?.toLowerCase() === "girl" ? "girl" : "boy";
+
+// 			// clean and lowercase the full name for username
+// 			const username = user.fullName?.toLowerCase().replace(/\s+/g, '') || "user";
+
+// 			return {
+// 				...user._doc,
+// 				profilePic: `https://avatar-placeholder.iran.liara.run/public/${gender}?username=${username}`
+// 			};
+// 		});
+
+// 		res.status(200).json(usersWithProfilePics);
+// 	} catch (error) {
+// 		console.error("Error in getUserForSidebar:", error.message);
+// 		res.status(500).json({ error: "Internal Server Error" });
+// 	}
+// };

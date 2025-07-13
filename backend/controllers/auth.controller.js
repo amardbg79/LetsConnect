@@ -19,8 +19,9 @@ export const signup = async (req, res) => {
     //Hash Password here
     //https://avtar-placeholder.iran.liara.run/
 
-    const boyProfilePic = `https://avtar-placeholder.iran.liara.run/public/boy?username=${username}`// Placeholder profile pic URL
-    const girlProfilePic = `https://avtar-placeholder.iran.liara.run/public/girl?username=${username}`// Placeholder profile pic URL
+    const boyProfilePic = `https://avatar-placeholder.iran.liara.run/public/boy?username=${username}`;
+    const girlProfilePic = `https://avatar-placeholder.iran.liara.run/public/girl?username=${username}`;
+
 
     //const hashedPassword = await bcrypt.hash(password, 10);
 
